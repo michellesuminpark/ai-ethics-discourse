@@ -39,8 +39,8 @@ os.makedirs("results", exist_ok=True)
 
 def main() -> None:
     print("Loading data...")
-    paras  = pd.read_csv(PARA_CSV)
-    scores = pd.read_csv(ETHICS_CSV)
+    paras  = pd.read_csv(PARA_CSV, dtype={"paper_id": str})
+    scores = pd.read_csv(ETHICS_CSV, dtype={"paper_id": str})
 
     ethics_ids = set(scores[scores["has_ethics_term"] == 1]["paper_id"].astype(str))
     paras["paper_id"] = paras["paper_id"].astype(str)
@@ -118,7 +118,7 @@ def main() -> None:
     })
 
     if os.path.exists(LLM_CSV):
-        llm = pd.read_csv(LLM_CSV)[["paper_id", "theme", "substantive"]].copy()
+        llm = pd.read_csv(LLM_CSV, dtype={"paper_id": str})[["paper_id", "theme", "substantive"]].copy()
         llm["paper_id"] = llm["paper_id"].astype(str)
         doc_df = doc_df.merge(llm, on="paper_id", how="left")
         print("Merged LLM theme codes into doc dataframe")

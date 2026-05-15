@@ -212,7 +212,7 @@ def checkpoint_path(year: int) -> str:
 def load_checkpoint(year: int) -> list[dict] | None:
     path = checkpoint_path(year)
     if os.path.exists(path):
-        df = pd.read_csv(path)
+        df = pd.read_csv(path, dtype={"paper_id": str})
         if "extraction_status" not in df.columns:
             df["extraction_status"] = "success"
         return df.to_dict("records")

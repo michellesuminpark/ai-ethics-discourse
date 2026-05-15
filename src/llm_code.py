@@ -142,7 +142,7 @@ def build_excerpts(ethics_paragraphs_str: str, max_chars: int = MAX_CONTEXT_CHAR
 
 def load_checkpoint(out_csv: str) -> set[str]:
     if os.path.exists(out_csv):
-        done = pd.read_csv(out_csv)
+        done = pd.read_csv(out_csv, dtype={"paper_id": str})
         return set(done["paper_id"].astype(str))
     return set()
 
@@ -154,7 +154,7 @@ def main() -> None:
 
     client = anthropic.Anthropic(api_key=api_key)
 
-    scores = pd.read_csv(ETHICS_CSV)
+    scores = pd.read_csv(ETHICS_CSV, dtype={"paper_id": str})
     hit    = scores[scores["has_ethics_term"] == 1].copy()
     print(f"Papers with ethics hit: {len(hit)} / {len(scores)}")
 
@@ -226,7 +226,7 @@ def main() -> None:
         )
         done_ids.add(pid)
 
-    final = pd.read_csv(OUT_CSV) if os.path.exists(OUT_CSV) else pd.DataFrame(rows)
+    final = pd.read_csv(OUT_CSV, dtype={"paper_id": str}) if os.path.exists(OUT_CSV) else pd.DataFrame(rows)
     n_sub   = (final["substantive"] == 1).sum()
     n_inc   = (final["substantive"] == 0).sum()
     n_err   = final["substantive"].isna().sum()

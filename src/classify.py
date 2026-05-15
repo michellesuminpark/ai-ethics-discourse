@@ -362,7 +362,7 @@ def main() -> None:
                         help="Re-run heuristic classification even if sector column exists")
     args = parser.parse_args()
 
-    df = pd.read_csv(CSV_PATH)
+    df = pd.read_csv(CSV_PATH, dtype={"paper_id": str})
     print(f"Loaded {len(df)} papers")
 
     needs_classification = args.reclassify or "sector" not in df.columns

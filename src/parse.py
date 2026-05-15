@@ -54,7 +54,7 @@ def extract_paragraphs(pdf_path: str, min_chars: int = MIN_CHARS) -> list[str]:
 
 
 def main() -> None:
-    df = pd.read_csv(CSV_IN)
+    df = pd.read_csv(CSV_IN, dtype={"paper_id": str})
     print(f"Loaded {len(df)} papers from {CSV_IN}")
 
     rows: list[dict] = []
