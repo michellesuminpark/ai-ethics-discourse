@@ -1,0 +1,12 @@
+{
+  "label_0": "research university",
+  "label_1": "industry research lab",
+  "n_papers": 295,
+  "n_label_0": 267,
+  "n_label_1": 28,
+  "auc": 0.6236,
+  "accuracy": 0.9051,
+  "f1_macro": 0.4751,
+  "f1_label_0": 0.9502,
+  "f1_label_1": 0.0
+}

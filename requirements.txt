@@ -17,11 +17,14 @@ scikit-learn>=1.4
 # LLM coding
 anthropic>=0.40
 
+# Environment variables
+python-dotenv>=1.0
+
 # BERTopic pipeline
 bertopic>=0.16
 sentence-transformers>=3.0
 hdbscan>=0.8
 
-# Visualization (for analysis notebooks)
+# Visualization (notebooks)
 matplotlib>=3.8
 seaborn>=0.13

@@ -1,0 +1,13 @@
+topic_id,label,count,top_terms
+0,0_learning_agents_agent_policy,54,learning(0.026); agents(0.017); agent(0.015); policy(0.012); state(0.012); reinforcement(0.012); rl(0.011); space(0.011); reinforcement learning(0.011); reward(0.010)
+1,1_llms_language_reasoning_tasks,39,llms(0.022); language(0.020); reasoning(0.020); tasks(0.013); large(0.012); llm(0.011); agents(0.011); generation(0.011); agent(0.010); large language(0.010)
+2,2_problem_problems_sat_solutions,35,problem(0.023); problems(0.016); sat(0.015); solutions(0.014); optimization(0.013); set(0.012); algorithms(0.012); solution(0.012); algorithm(0.012); time(0.011)
+3,3_process_event_knowledge_mining,33,process(0.024); event(0.021); knowledge(0.020); mining(0.020); log(0.013); techniques(0.011); patterns(0.011); event log(0.011); data(0.010); lpm(0.009)
+4,4_data_knowledge_learning_tasks,33,data(0.025); knowledge(0.016); learning(0.012); tasks(0.011); brain(0.010); language(0.009); clinical(0.009); health(0.009); dimensions(0.009); eeg(0.009)
+5,5_ai_systems_ethics_fairness,30,ai(0.036); systems(0.015); ethics(0.012); fairness(0.011); keywords(0.010); ethical(0.009); research(0.008); intelligence(0.008); artiﬁcial(0.008); ai ethics(0.008)
+6,6_end_data_learning_research,27,end(0.018); data(0.017); learning(0.014); research(0.014); ai(0.014); xai(0.013); neural(0.013); symbolic(0.012); explanation(0.012); cognitive(0.012)
+7,7_driving_vehicles_traffic_sdd,18,driving(0.018); vehicles(0.014); traffic(0.014); sdd(0.012); safety(0.011); time(0.011); savs(0.011); data(0.011); happo(0.010); university(0.010)
+8,8_planning_temporal_plan_hierarchical,14,planning(0.059); temporal(0.020); plan(0.019); hierarchical(0.018); manufacturing(0.018); htn(0.014); fond(0.014); synthesis(0.013); time(0.013); action(0.011)
+9,9_game_games_player_agent,14,game(0.052); games(0.031); player(0.018); agent(0.015); round(0.014); agents(0.014); intelligence(0.012); code(0.012); artiﬁcial(0.012); ai(0.011)
+10,10_ai_xai_systems_ai systems,13,ai(0.042); xai(0.028); systems(0.023); ai systems(0.023); explanations(0.019); users(0.017); active inference(0.017); active(0.016); methods(0.015); inference(0.014)
+11,11_energy_grid_charging_network,10,energy(0.033); grid(0.027); charging(0.025); network(0.018); ev(0.016); china(0.016); data(0.016); optimal(0.015); cx(0.015); electrical(0.015)
