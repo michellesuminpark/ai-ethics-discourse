@@ -22,5 +22,4 @@ venv/
 .DS_Store
 *.log
 .env
-results/figures/*.png
 results/bertopic_*_model/

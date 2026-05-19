@@ -102,6 +102,7 @@ def _call_llm(client: anthropic.Anthropic, paper_id: str,
             msg = client.messages.create(
                 model=MODEL,
                 max_tokens=2048,
+                temperature=1,
                 system=CLASSIFY_SYSTEM,
                 messages=[{"role": "user", "content": user_msg}],
             )

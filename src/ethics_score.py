@@ -106,6 +106,7 @@ def _call_api(
             msg = client.messages.create(
                 model=MODEL,
                 max_tokens=256,
+                temperature=1,
                 system=SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": user}],
             )

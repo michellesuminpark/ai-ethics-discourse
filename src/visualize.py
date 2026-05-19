@@ -48,11 +48,11 @@ GRAY_OTHER  = "#A0A0A0"
 mpl.rcParams.update({
     "font.family":        "serif",
     "font.serif":         ["Times New Roman", "Times", "DejaVu Serif"],
-    "font.size":          11,
-    "axes.titlesize":     12,
-    "axes.labelsize":     11,
-    "xtick.labelsize":    10,
-    "ytick.labelsize":    10,
+    "font.size":          16,
+    "axes.titlesize":     18,
+    "axes.labelsize":     16,
+    "xtick.labelsize":    14,
+    "ytick.labelsize":    14,
     "axes.spines.top":    False,
     "axes.spines.right":  False,
     "axes.grid":          False,
@@ -60,7 +60,7 @@ mpl.rcParams.update({
     "legend.frameon":     True,
     "legend.framealpha":  1.0,
     "legend.edgecolor":   "#CCCCCC",
-    "legend.fontsize":    9,
+    "legend.fontsize":    14,
 })
 
 _generated: list = []
@@ -127,7 +127,7 @@ def fig1(collapsed: pd.DataFrame) -> None:
     ax.set_yticks(range(len(counts)))
     ax.set_yticklabels(counts.index)
     ax.set_xlabel("Number of Papers")
-    ax.set_title(f"Pilot Corpus Composition by Institution Type (N={total})", pad=10)
+    ax.set_title(f"Pilot Corpus Composition by Institution Type (N=399)", pad=10)
     _vgrid(ax)
     for i, (val, idx) in enumerate(zip(counts.values, counts.index)):
         ax.text(val + 1.5, i, f"{val} ({val/total*100:.1f}%)",
@@ -248,7 +248,7 @@ def fig4b(collapsed: pd.DataFrame, ethics: pd.DataFrame) -> None:
     ax.set_ylim(0, 1)
     ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda y, _: f"{y:.0%}"))
     ax.set_title("Ethics Framing Theme Proportion by Institution Type", pad=10)
-    _right_legend(fig, ax)
+    ax.legend(loc="lower left", frameon=True, fontsize=12)
     _save(fig, "theme_by_insttype_stacked", 4, suffix="b")
     plt.close(fig)
 
@@ -489,7 +489,7 @@ def fig10(bert_corpus_out: pd.DataFrame) -> None:
         "Semantic Space of cs.AI Papers (2018–2025): Ethics Cluster Highlighted",
         pad=10,
     )
-    _right_legend(fig, ax, markerscale=1.5)
+    ax.legend(loc="lower left", frameon=True, fontsize=12, markerscale=1.5)
     _save(fig, "umap_corpus", 10)
     plt.close(fig)
 
